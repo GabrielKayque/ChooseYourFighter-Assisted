@@ -8,14 +8,65 @@
 </head>
 <body>
     <main>  
-        <header>
-            <h1>Character Select</h1>
+        <header class="header">
+            <h1 class="title">Character Select</h1>
         </header>
+
         <div>
-            <div></div>
-            <ul></ul>
-            <div></div>
+            <div class="bigcharacter player1">
+                <img src="./src/images/thor.png" alt="Character Player 1" id="character-player1">
+                <div class="name">
+                    <h2>Thor</h2>
+                </div>
+            </div>
+
+            <ul class="character-list">
+                <li class="character selected" id="thor" data-name="Thor">
+                    <span class="tag">1P</span>
+                    <img src="./src/images/thor.jpg" alt="thors face">
+                </li>
+                <li class="character" id="ironman" data-name="Iron Man">
+                    <span class="tag">1P</span>
+                    <img src="./src/images/homem-de-ferro.jpg" alt="ironmans face">
+                </li>
+                <li class="character" id="blackwidow" data-name="Black Widow">
+                    <span class="tag">1P</span>
+                    <img src="./src/images/viuva-negra.jpg" alt="black widows face">
+                </li>
+                <li class="character" id="hulk" data-name="Hulk">
+                    <span class="tag">1P</span>
+                    <img src="./src/images/hulk.jpg" alt="hulks face">
+                </li>
+                <li class="character" id="captainamerica" data-name="Captain America">
+                    <span class="tag">1P</span>
+                    <img src="./src/images/capitao-america.jpg" alt="captain americas face">
+                </li>
+                <li class="character selected-player2" id="ultron" data-name="Ultron">
+                    <span class="tag">2P</span>
+                    <img src="./src/images/ultron.jpg" alt="ultrons face">
+                </li>
+                <li class="character" id="doctordoom" data-name="Doctor Doom">
+                    <span class="tag">1P</span>
+                    <img src="./src/images/doutor-doom.jpg" alt="Dooms face">
+                </li>
+                <li class="character" id="nova" data-name="Nova">
+                    <span class="tag">1P</span>
+                    <img src="./src/images/nova.jpg" alt="Novas face">
+                </li>
+                <li class="character" id="phoenix" data-name="Phoenix">
+                    <span class="tag">1P</span>
+                    <img src="./src/images/fenix.jpg" alt="phoenixs face">
+                </li>
+            </ul>
+
+            <div class="bigcharacter player2">
+                <img src="./src/images/ultron.png" alt="Character Player 2" id="character-player2">
+                <div class="name">
+                    <h2>Ultron</h2>
+                </div>
+            </div>
         </div>
+
     </main>
 </body>
 </html>
