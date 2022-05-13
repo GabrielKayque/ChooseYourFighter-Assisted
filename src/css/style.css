@@ -1,0 +1,113 @@
+/* variaveis
+  -  reset
+   - fonts
+    animaçoes
+    estilos */
+    
+@font-face {
+    font-family: 'ssf4';
+    src: url(../fonts/SSF4_ABUKET.woff);
+}
+
+@font-face {
+    font-family: 'command';
+    src: url(../fonts/PILOT_COMMAND.otf);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+    box-sizing: border-box;
+}
+
+ul {
+    list-style: none;
+}
+
+body {
+    font-family: 'ssf4', Courier, monospace;
+    background: #000000;
+}
+
+body::before {
+    content: '';
+    background-image: url(../images/1cYrMYF.gif);
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    opacity: 0.2;
+    z-index: -1;
+}
+
+main {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+}
+
+.header {
+    display: flex;
+    justify-content: center;
+}
+
+.header .title {
+    color: #faefd8;
+    text-transform: uppercase;
+    font-size: 50px;
+    line-height: 100px;
+    -webkit-text-stroke: 2px #f77a2c;
+}
+
+.character-select {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.bigcharacter {
+    text-align: center;
+    width: 30%;
+    height: 70vh;
+    position: relative;
+}
+
+.bigcharacter img {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.bigcharacter .name::before {
+    content: '';
+    height: 15px;
+    width: 100%;
+    position: absolute;
+    bottom: -15px;
+    left: 0;
+}
+
+.player1 .name::before{
+    background-color: #0271F7;
+}
+
+.player2 .name::before{
+    background-color: #D60223;
+}
+
+.bigcharacter h2 {
+    color: #ffffff;
+    font-family: 'command', sans-serif;
+    position: absolute;
+    bottom: -15px;
+    width: 100%;
+    font-size: 27px;
+}
+
