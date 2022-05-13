@@ -14,6 +14,45 @@
     src: url(../fonts/PILOT_COMMAND.otf);
 }
 
+@keyframes glowing-blue {
+    0% {
+      box-shadow: 0 0 5px #8fbff8, 0 0 5px #8fbff8, 0 0 15px #8fbff8, 0 0 20px #0271F7, 0 0 10px #0271F7, 0 0 10px #0271F7, 0 0 10px #0271F7, 0 0 10px #0271F7
+    }
+  
+    to {
+      box-shadow: 0 0 2.5px #8fbff8, 0 0 2.5px #8fbff8, 0 0 7.5px #8fbff8, 0 0 10px #0271F7, 0 0 5px #0271F7, 0 0 5px #0271F7, 0 0 5px #0271F7, 0 0 2px #0271F7
+    }
+}
+
+@keyframes glowing-red {
+    0% {
+      box-shadow: 0 0 5px #ebd5d2, 0 0 5px #ebd5d2, 0 0 15px #ebd5d2, 0 0 20px #D60223, 0 0 10px #D60223, 0 0 10px #D60223, 0 0 10px #D60223, 0 0 10px #D60223
+    }
+  
+    to {
+      box-shadow: 0 0 2.5px #ebd5d2, 0 0 2.5px #ebd5d2, 0 0 7.5px #ebd5d2, 0 0 10px #D60223, 0 0 5px #D60223, 0 0 5px #D60223, 0 0 5px #D60223, 0 0 2px #D60223
+    }
+}
+
+@keyframes text-glowing-blue {
+    0% {
+      text-shadow: 0 0 1px #ffffff, 0 0 1px #ffffff, 0 0 1px #ffffff, 0 0 1px #d3ffff, 0 0 5px #d3ffff, 0 0 2px #d3ffff, 0 0 10px #d3ffff, 0 0 10px #d3ffff
+    }
+  
+    to {
+      text-shadow: 0 0 .5px #ffffff, 0 0 .5px #ffffff, 0 0 .5px #ffffff, 0 0 .5px #d3ffff, 0 0 5px #d3ffff, 0 0 .5px #d3ffff, 0 0 5px #d3ffff, 0 0 2px #d3ffff
+    }
+  }
+  
+  @keyframes text-glowing-red {
+    0% {
+      text-shadow: 0 0 1px #ebd5d2, 0 0 1px #ebd5d2, 0 0 1px #ebd5d2, 0 0 1px #ffbebe, 0 0 5px #ffbebe, 0 0 2px #ffbebe, 0 0 10px #ffbebe, 0 0 10px #ffbebe
+    }
+  
+    to {
+      text-shadow: 0 0 .5px #ebd5d2, 0 0 .5px #ebd5d2, 0 0 .5px #ebd5d2, 0 0 .5px #ffbebe, 0 0 5px #ffbebe, 0 0 .5px #ffbebe, 0 0 5px #ffbebe, 0 0 2px #ffbebe
+    }
+  }
 * {
     margin: 0;
     padding: 0;
@@ -65,6 +104,8 @@ main {
     -webkit-text-stroke: 2px #f77a2c;
 }
 
+/* Styling Big character for player 1 and 2 */
+
 .character-select {
     display: flex;
     align-items: center;
@@ -111,3 +152,77 @@ main {
     font-size: 27px;
 }
 
+/* Styling list for character selection */
+
+.character-list {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 600px;
+    justify-content: center;
+    gap: 12px;
+}
+
+.character-list .character {
+    border: 2px solid #ffffff;
+    background-color: #ffffff;
+    width: 30%;
+    height: 160px;
+    cursor: pointer;
+    z-index: 1;
+    border-radius: 8px;
+    position: relative;
+    transition: 0.15% ease-in-out;
+}
+
+.character img {
+    width: 100%;
+    height: 100%;
+    border-radius: 8px;
+}
+
+.character-list .character.character.selected {
+    border: 2px solid #d3ffff;
+    animation: glowing-blue .3s ease-in-out infinite;
+    animation-direction: alternate;
+}
+
+.character-list .character:hover {
+    animation: glowing-blue .3s ease-in-out infinite;
+    animation-direction: alternate;
+    transform: scale(1.07);
+}
+
+.character-list .character.character.selected-player2 {
+    border: 2px solid #f89284;
+    animation: glowing-red .3s ease-in-out infinite;
+    animation-direction: alternate;
+}
+
+.character-list .character .tag {
+    display: none;
+    font-family: 'Times New Roman', Times, serif;
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    color: #d3ffff;
+    animation: text-glowing-blue .3s ease-in-out infinite;
+    transition: opacity .3s ease-in-out;
+    animation-direction: alternate;
+}
+
+.character-list .character .tag2 {
+    font-family: 'Times New Roman', Times, serif;
+    position: absolute;
+    top: 5px;
+    right: 6px;
+    color: #d3ffff;
+    animation: text-glowing-red .3s ease-in-out infinite;
+    transition: opacity .3s ease-in-out;
+    animation-direction: alternate;
+}
+
+.character-list .character.selected .tag {
+    display: block;
+    animation: text-glowing-blue .3s ease-in-out infinite;
+    animation-direction: alternate;
+} 
