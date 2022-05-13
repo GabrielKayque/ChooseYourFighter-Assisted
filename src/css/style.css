@@ -192,6 +192,7 @@ main {
     animation: glowing-blue .3s ease-in-out infinite;
     animation-direction: alternate;
     transform: scale(1.07);
+    z-index: 1;
 }
 
 .character-list .character.character.selected-player2 {
