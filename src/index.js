@@ -1,5 +1,4 @@
 // Change the ul > li class to selected  when mouse is hovering
-
 const characters = document.querySelectorAll('.character-list>li');
 
 characters.forEach((character) => {
