@@ -1,8 +1,3 @@
-/* variaveis
-  -  reset
-   - fonts
-    animaçoes
-    estilos */
     
 @font-face {
     font-family: 'ssf4';
@@ -182,7 +177,7 @@ main {
     border-radius: 8px;
 }
 
-.character-list .character.character.selected {
+.character-list .character.selected {
     border: 2px solid #d3ffff;
     animation: glowing-blue .3s ease-in-out infinite;
     animation-direction: alternate;
@@ -195,7 +190,7 @@ main {
     z-index: 2;
 }
 
-.character-list .character.character.selected-player2 {
+.character-list .character.selected-player2 {
     border: 2px solid #f89284;
     animation: glowing-red .3s ease-in-out infinite;
     animation-direction: alternate;
