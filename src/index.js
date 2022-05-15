@@ -14,7 +14,7 @@ characters.forEach((character) => {
         name.innerHTML = character.dataset.name
 
         character.onclick = () => {
-            window.location.replace("www.linkedin.com/in/gabrielkayqueoliveira")
+            window.location.replace("//www.linkedin.com/in/gabrielkayqueoliveira")
         }
     });
 })
