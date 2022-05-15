@@ -12,6 +12,10 @@ characters.forEach((character) => {
         imgPlayer1.attributes.src.value = `src/images/${imgSelected}`;
         const name = document.querySelector('#character-name')
         name.innerHTML = character.dataset.name
+
+        character.onclick = () => {
+            window.location.replace("www.linkedin.com/in/gabrielkayqueoliveira")
+        }
     });
 })
 
