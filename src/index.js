@@ -9,13 +9,10 @@ characters.forEach((character) => {
 
         // Change the name e photo from big character 1 when mouse is hovering list
         const imgPlayer1 = document.getElementById('character-player1');
-        // console.log(imgPlayer1)
         const imgSelected = character.children[1].dataset.png;
-        // console.log(imgSelected)
         imgPlayer1.attributes.src.value = `src/images/${imgSelected}`;
-        console.log(imgPlayer1.attributes.src.value);
-
-        document.querySelector('#character-name').innerHTML = character.dataset.name
+        const name = document.querySelector('#character-name')
+        name.innerHTML = character.dataset.name
     });
 })
 
