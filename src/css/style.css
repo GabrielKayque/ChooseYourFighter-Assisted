@@ -156,7 +156,7 @@ main {
     flex-wrap: wrap;
     max-width: 600px;
     justify-content: center;
-    gap: 12px;
+    gap: 0.6rem;
 }
 
 .character-list .character {
